@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: black;
+            box-sizing: border-box;
+          
+        }
+        p{
+            color: white;
+            padding: 20px 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+     <div class="list">
+         <div class="box">
+             <p>鼠标移入改变样式，鼠标移出恢复</p>
+         </div>
+     </div>
+     <script>
+         let box=document.querySelector('.box')
+         box.onmouseover=function(){
+             box.style.background="red"
+             box.style.border="20px solid blue"
+             box.style.cursor="pointer"
+         }
+         box.onmouseout=function(){
+             box.style=""
+         }
+     </script>
+</body>
+</html>

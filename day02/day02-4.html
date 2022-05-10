@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list{
+            width: 60px;
+            height: 100px;
+            border: 1px solid rgb(30, 30, 122);
+            box-sizing: border-box;
+            margin-top: 10px;
+            display: none;
+        }
+        p{
+            padding: 0;
+            margin: 10px 0;
+        }
+        .tt{
+            border-bottom: 1px solid  rgb(30, 30, 122);
+            margin: 2px 0;
+        }
+        .ts{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+      <input type="button" value="输入法">
+    </div>
+    <div class="list">
+       <div class="tt">
+           <p>手写</p>
+           <p>拼音</p>
+       </div>
+       <p class="ts">
+         关闭
+       </p>
+    </div>
+    <script>
+        let int=document.querySelector('input')
+        let list=document.querySelector('.list')
+        let p=document.querySelectorAll('p')
+        let ts=document.querySelector('.ts')
+        let tt=document.querySelector('.tt')
+        int.onclick=function(){
+            list.style.display="block"
+        }
+        ts.onclick=function(){
+            list.style.display="none"
+        }
+      
+        for(var i=0;i<p.length;i++){
+            p[i].onmouseover=function(){
+                for(var i=0;i<p.length;i++){
+                    p[i].style.background=""
+                }
+                this.style.background="red"
+            }
+        }
+    </script>
+</body>
+</html>

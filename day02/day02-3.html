@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50%;
+            margin: 0 auto;
+        }
+        .login{
+            width: 30%;
+            margin: 10px 0;
+            color: rgb(36, 32, 32);
+            font-size: 14px;
+            border: 1px solid orange;
+            background: #eee8aa;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inp">
+            <input type="checkbox">两周内自动登录
+        </div>
+        <div class="login">
+            为了您的安全，请不要在网吧或公用电脑上使用此功能
+        </div>
+    </div>
+    <script>
+        let login=document.querySelector('.login')
+        let inp=document.querySelector('.inp')
+        inp.onmouseover=function(){
+            login.style.display="block"
+        }
+        inp.onmouseout=function(){
+            login.style.display="none"
+        }
+    </script>
+   
+</body>
+</html>

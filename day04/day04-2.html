@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .ul1 {
+            width: 100%;
+            height: 50px;
+
+            display: flex;
+        }
+
+        .ul1 li {
+            width: 20%;
+            text-align: center;
+            list-style: none;
+            line-height: 50px;
+
+        }
+
+        .ul1 li.mouse {
+            background: red;
+            color: black;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .on {
+            display: block;
+        }
+
+        div {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="ul1">
+        <li class="mouse">第一课</li>
+        <li>第二课</li>
+        <li>第三课</li>
+    </ul>
+
+
+    <div class="on">
+        <ul>
+            <li>收到你肯定j</li>
+            <li>收到你肯定j</li>
+            <li>收到你肯定k</li>
+            <li>收到你肯定l</li>
+        </ul>
+    </div>
+    <div class="">
+        <ul>
+            <li>sdnknlk</li>
+            <li>sdnknlk</li>
+            <li>sdnknlk</li>
+            <li>sdnknlk</li>
+            <li>sdnknlk</li>
+        </ul>
+
+    </div>
+    <div class="">
+        <ul>
+            <li>HDIIDNIFNDSD</li>
+            <li>HDIIDNIFNDSD</li>
+            <li>HDIIDNIFNDSD</li>
+            <li>HDIIDNIFNDSD</li>
+            <li>HDIIDNIFNDSD</li>
+        </ul>
+
+    </div>
+    <script>
+        let liu = document.getElementsByTagName("ul")[0].children
+        let zhi = document.getElementsByTagName('div')
+        for (i = 0; i < liu.length; i++) {
+            liu[i].index = i
+            liu[i].onmouseover = function () {
+                zhi[0].className = ""
+                zhi[1].className = ""
+                zhi[2].className = ""
+
+                liu[0].className = ""
+                liu[1].className = ""
+                liu[2].className = ""
+                this.className = "mouse"
+                zhi[i].className = "on"
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            width: 50%;
+            margin: 10px auto;
+        }
+
+        .box {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background: black;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 14px;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <div class="box">
+            <label for="">属性名：</label>
+            <input type="text" class="ipt1" value="background">
+        </div>
+        <div class="box">
+            <label for="">属性值：</label>
+            <input type="text" class="ipt2" value="blue">
+        </div>
+        <div class="box">
+            <label for=""></label>
+            <input type="button" class="btn1" value="确定">
+            <input type="button" class="btn2" value="重置">
+        </div>
+        <div class="box3">
+            上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果
+        </div>
+    </div>
+    
+    <script>
+        let ipt1 = document.querySelector('.ipt1')
+        let ipt2 = document.querySelector('.ipt2')
+        let btn1 = document.querySelector('.btn1')
+        let btn2 = document.querySelector('.btn2')
+        let box3=document.querySelectorAll('.box3')
+        btn1.onclick = function () {
+            let inp1 = ipt1.value
+            let inp2 = ipt2.value
+            for(var i=0;i<box3.length;i++){
+                function change(a,b){
+                    box3[i].style[a]=b
+                }
+                change(inp1,inp2)
+            }
+
+        }
+        btn2.onclick=function(){
+           for(var i=0;i<box3.length;i++){
+               box3[i].style=""
+           }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

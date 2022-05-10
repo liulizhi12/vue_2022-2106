@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50%;
+            margin: 20px auto;
+        }
+        ul{
+            width: 250px;
+            height: 350px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-left: 0;
+        }
+        li{
+            list-style-type: none;
+            width: 75px;
+            height: 75px;
+            background: wheat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul id="ul">
+            <li><span>1</span><span>JAN</span></li>
+            <li><span>2</span><span>JAN</span></li>
+            <li><span>3</span><span>JAN</span></li>
+            <li><span>4</span><span>JAN</span></li>
+            <li><span>5</span><span>JAN</span></li>
+            <li><span>6</span><span>JAN</span></li>
+            <li><span>7</span><span>JAN</span></li>
+            <li><span>8</span><span>JAN</span></li>
+            <li><span>9</span><span>JAN</span></li>
+            <li><span>10</span><span>JAN</span></li>
+            <li><span>11</span><span>JAN</span></li>
+            <li><span>12</span><span>JAN</span></li>
+        </ul>
+        <p>
+            <b><span id="s1"></span>月活动</b><br>
+            <span>清明节：上坟烧报纸</span>
+        </p>
+    </div>
+    <script>
+        let ul=document.getElementById("ul")
+        let a=ul.children;
+        //默认效果
+        a[0].style.backgroundColor="red"
+        a[0].style.color="white"
+        s1.innerText=4
+        for(i=0;i<a.length;i++){
+            a[i].index=i;//获取编号
+            a[i].onmouseover=function fun(){
+                for(i=0;i<a.length;i++){
+                    //初始化
+                    a[i].style=""
+                }
+                this.style.backgroundColor="red"
+                this.style.color="white"
+                s1.innerText=this.index+1
+            }
+        }
+    </script>
+</body>
+</html>

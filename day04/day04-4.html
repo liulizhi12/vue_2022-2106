@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 20%;
+            margin: 20px auto;
+            background: #ccc;
+
+        }
+
+        header {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            background: chocolate;
+            color: black;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        #ul {
+            width: 100%;
+            display: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #ul li {
+            list-style: none;
+            line-height: 40px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            播放列表...
+        </header>
+        <ul id="ul">
+            <li>很多覅hi</li>
+            <li>很多覅hi</li>
+            <li>很多覅hi</li>
+            <li>很多覅hi</li>
+            <li>很多覅hi</li>
+            <li>很多覅hi</li>
+        </ul>
+    </div>
+    <script>
+        let liu = document.querySelector('header')
+        let ul1 = document.getElementById('ul')
+        let a = ul1.children
+        liu.onclick = function () {
+            ul1.style.display = "block"
+
+            for (var i = 0; i < a.length; i++) {
+                a[i].index = i
+                a[i].onmouseover = function () {
+                    for (i = 0; i < a.length; i++) {
+                        a[i].style = ""
+                    }
+                    this.style.background = "red"
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

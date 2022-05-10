@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            font-size: 14px;
+        }
+        .btn{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <span>输入数字求和，数字之间用","号分隔</span>
+    <br>
+    <button class="btn">求和</button>
+     <p></p>
+    <script>
+        let inp=document.querySelector('input')
+        let btn=document.querySelector('.btn')
+        btn.onclick=function(){
+           
+            let sum=0; //求和的值
+            let nums=inp.value.split(",")
+            //求和
+            for(var i=0;i<nums.length;i++){
+                sum+=parseInt(nums[i])
+            }
+            //输出和值
+           document.getElementsByTagName("p")[0].innerHTML=sum
+        }
+    </script>
+</body>
+</html>

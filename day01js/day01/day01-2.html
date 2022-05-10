@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #body1{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+       table{
+           width: 500px;
+           border: 1px solid #ccc;
+           color: rgb(73, 67, 67);
+       }
+        #button1{
+            background-color: red;
+            color: white;
+        }
+        #button2{
+            background-color: green;
+            color: white;
+        }
+        #button3{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body id="body1">
+  
+        <input type="button" value="红色" id="button1">
+        <input type="button" value="绿色" id="button2">
+        <input type="button" value="黑色" id="button3">
+  
+    <table>
+        <tr>
+            <th>新闻</th>
+            <th>娱乐</th>
+            <th>体育</th>
+            <th>电影</th>
+            <th>音乐</th>
+            <th>旅游</th>
+        </tr>
+    </table>
+    <script>
+        //页面加载完毕后进行触发
+        window.onload=function(){
+            let button1=document.querySelector('#button1')
+            let button2=document.querySelector('#button2')
+            let button3=document.querySelector('#button3')
+            let body1=document.querySelector('#body1')
+            button1.onclick=function(){
+                let liu=body1.style.background="red"
+                button1.innerHTML=liu
+            }
+            button2.onclick=function(){
+                let liu=body1.style.background="green"
+                button2.innerHTML=liu
+            }
+            button3.onclick=function(){
+                let liu=body1.style.background="black"
+                button3.innerHTML=liu
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 600px;
+            border: 1px solid #ddd;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid black;
+        }
+
+      
+
+        .btn {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="checkbox" id="boxid" onchange="qxuan()">
+        <span class="ts">全选</span>
+        <button class="btn" onclick="fxuan()">反选</button>
+    </div>
+    <div class="list">
+        <input type="checkbox" class="inp">选项(1)
+        <br>
+        <input type="checkbox" class="inp">选项(2)
+        <br>
+        <input type="checkbox" class="inp">选项(3)
+        <br>
+        <input type="checkbox" class="inp">选项(4)
+        <br>
+        <input type="checkbox" class="inp">选项(5)
+        <br>
+        <input type="checkbox" class="inp">选项(6)
+        <br>
+        <input type="checkbox" class="inp">选项(7)
+        <br>
+        <input type="checkbox" class="inp">选项(8)
+        <br>
+        <input type="checkbox" class="inp">选项(9)
+    </div>
+    <script>
+        function qxuan() {
+            let boxid=document.querySelector('#boxid')
+            let inp=document.querySelectorAll('.inp')
+            let ts=document.querySelector('.ts')
+            if(boxid.checked==false){
+                for(var i=0;i<inp.length;i++){
+                    inp[i].checked=false
+                    ts.innerText="全选"
+                }
+            }else{
+                for(var i=0;i<inp.length;i++){
+                    inp[i].checked=true
+                    ts.innerText="全不选"
+                }
+            }
+        }
+        function fxuan() {
+            let inps = document.querySelectorAll('.inp')
+            let boxid = document.querySelector('#boxid')
+            for (var i = 0; i < inps.length; i++) {
+                if (inps[i].checked == false) {
+                    inps[i].checked = true
+
+
+                } else {
+                    inps[i].checked = false
+
+                }
+            }
+
+            
+
+
+        }
+    </script>
+</body>
+
+</html>
