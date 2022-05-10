@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+        }
+
+        .box {
+            width: 90%;
+            height: 800px;
+            margin: 20px auto;
+        }
+    </style>
+    <script src="./echarts.js"></script>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
+<script>
+    let box = document.querySelector('.box')
+    let mycharts = echarts.init(box)
+    option = {
+        title: [
+            {
+                text: 'Tangential Polar Bar Label Position (middle)'
+            }
+        ],
+        polar: {
+            radius: [30, '80%']
+        },
+        angleAxis: {
+            max: 4,
+            startAngle: 75
+        },
+        radiusAxis: {
+            type: 'category',
+            data: ['a', 'b', 'c', 'd']
+        },
+        tooltip: {},
+        series: {
+            type: 'bar',
+            data: [2, 1.2, 2.4, 3.6],
+            coordinateSystem: 'polar',
+            label: {
+                show: true,
+                position: 'middle',
+                formatter: '{b}: {c}'
+            }
+        }
+    };
+    mycharts.setOption(option)
+</script>
