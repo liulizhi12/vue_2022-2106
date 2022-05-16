@@ -1,0 +1,11 @@
+<svg width="800" height="450" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect x="0" y="0" width="100%" height="100%" style="fill:#ffff" />
+    <ellipse cx="100" cy="100" rx="20" ry="20" style="fill:red" />
+    <ellipse cx="95" cy="105" rx="20" ry="20" style="fill:#fff" />
+    <polygon points="100,100,130,105,115,120" style="fill:red" />
+    <ellipse cx="100" cy="180" rx="20" ry="20" style="fill:red" />
+    <ellipse cx="97" cy="175" rx="20" ry="20" style="fill:#fff" />
+    <polygon points="102,185,90,205,80,188" style="fill:red" />
+
+    <polygon points="0,250,100,210,200,250,100,400" style="fill:red" />
+</svg>

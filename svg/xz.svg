@@ -1,0 +1,18 @@
+<svg width="600" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect x="0" y="0" width="100%" height="100%" style="fill:#fff" />
+    <ellipse cx="60" cy="60" rx="30" ry="30" style="fill:red" />
+    <polygon points="45,80,75,80,85,115,62,105,40,115" style="fill:red" />
+
+    <ellipse cx="60" cy="170" rx="20" ry="20" stroke-width="10" style="stroke:red; fill:#fff" />
+    <path d="M 80 180 100 200 90 210 65 190 Z" fill="red" stroke="" stroke-width="" />
+
+    <ellipse cx="60" cy="240" rx="20" ry="20" style="fill:red" />
+    <polygon points="38,230,40,265,70,265" style="fill:#fff" />
+    <polygon points="82,230,50,265,80,265" style="fill:#fff" />
+
+    <ellipse cx="200" cy="60" rx="20" ry="20" style="fill:red" />
+    <ellipse cx="193" cy="54" rx="20" ry="20" style="fill:#fff" />
+
+    <polygon points="210 ,100,200,100,200,150,210,150 " style="fill:red" />
+    <polygon transform="rotate(90,205,125)" points="210 ,100,200,100,200,150,210,150 " style="fill:red" />
+</svg>

@@ -1,0 +1,14 @@
+<svg width="800" height="600" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect x="0" y="0" width="100%" height="100%" style="fill:#abc985" />
+    <polygon points="30,30,100,30,130,90,0,90" style="fill:red" />
+
+    <ellipse cx="60" cy="150" rx="30" ry="30" style="fill:red" />
+    <polygon points="90,120,90,180,60,152" style="fill:#abc985" />
+
+    <polygon points="30,240,50,230,130,230,150,240,150,280,130,290,50,290,30,280" style="fill:#fff" />
+    <polygon points="0,250,40,250,40,270" style="fill:#fff" />
+
+    <rect x="60" y="400" width="50" height="50" style="fill:#fff" transform="rotate(30, 100, 400) " />
+    <rect x="60" y="400" width="50" height="50" style="fill:#fff" transform="rotate(60, 90, 410) " />
+    <rect x="60" y="400" width="50" height="50" style="fill:#fff" transform="rotate(180, 80, 420) " />
+</svg>
