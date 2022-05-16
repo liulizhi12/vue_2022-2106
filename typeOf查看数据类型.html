@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre>
+                &lt; script type="text/javascript">
+                   alert(typeof 12345);		//输出number
+                   alert(typeof "abc");		//输出string
+                   alert(typeof document);  //输出object
+                &lt; script >
+    </pre>
+
+</body>
+
+</html>
+
+<script>
+    let pre = document.querySelector('pre')
+    pre.onclick = function () {
+        alert('typeof' + '\u2192' + '12345' + '==' + 'number' + '\n' + 'typeof' + '\u2192' + 'abc' + '==' +
+            'string' + '\n' + 'typeof' + '\u2192' + 'document' + '==' + 'object' + '\n')
+    }
+</script>

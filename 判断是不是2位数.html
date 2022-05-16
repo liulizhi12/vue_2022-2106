@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"><button>是否是两位数</button>
+
+</body>
+
+</html>
+<script>
+    let ipt = document.querySelector('input')
+    let btn = document.querySelector('button')
+    ipt.onkeyup = function () {
+        this.value = this.value.replace(/[^\d|',']/, '')
+    }
+    btn.onclick = function () {
+        let ls = ipt.value.length
+
+        ls == 2 ? alert(' \u2713这是两位数哦') : alert('这是' + ls + '位数')
+    }
+</script>

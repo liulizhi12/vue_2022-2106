@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pb {
+            width: 350px;
+            height: 500px;
+            background: #111;
+            overflow: auto;
+        }
+
+        h1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            line-height: 500px;
+            width: 350px;
+        }
+
+        h2 {
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 530px;
+            width: 350px;
+            display: none;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            line-height: 530px;
+        }
+
+        .jt {
+            width: 350px;
+            height: 30px;
+            font-size: 30px;
+            line-height: 30px;
+            color: #fff;
+            background: #ccc;
+        }
+
+        b {
+            position: absolute;
+            top: 500px;
+            left: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pb">
+        <h1>现在是屏保哦</h1>
+    </div>
+    <h2>现在是内容哦</h2>
+    <div class="jt"><b>></b></div>
+</body>
+
+</html>
+<script>
+    let b = document.querySelector('b')
+    let h1 = document.querySelector('h1')
+    let h2 = document.querySelector('h2')
+    let jt = document.querySelector('.jt')
+
+    b.addEventListener('mousedown', function () {
+
+        document.addEventListener('mousemove', function (e) {
+
+            if (b.offsetLeft <= 310) {
+                b.style.left = e.pageX + 'px'
+
+            } else {
+
+                h1.style.display = 'none'
+                h2.style.display = 'block'
+                jt.style.display = 'none'
+                document.onmousemove = null
+            }
+        })
+    })
+</script>

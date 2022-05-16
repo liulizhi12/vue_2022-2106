@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="ip1" type="text"> +
+    <input class="ip2" type="text"> =
+    <span></span>
+    <button>求和</button>
+</body>
+
+</html>
+
+<script>
+    let ipt = document.querySelectorAll('input')
+    let btn = document.querySelector('button')
+    let span = document.querySelector('span')
+
+    for (var i = 0; i < ipt.length; i++) {
+        ipt[i].onkeyup = function () {
+            this.value = this.value.replace(/[^\d | ',']/, '')
+        }
+    }
+    btn.onclick = function () {
+        var num = 0
+        num += Number(ipt[0].value) + Number(ipt[1].value)
+        span.innerText = num
+    }
+</script>

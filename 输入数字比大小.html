@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"> VS <input type="text"> <button>最大数是>></button>
+    <span></span>
+</body>
+
+</html>
+<script>
+    let ipt = document.querySelectorAll('input')
+    let btn = document.querySelector('button')
+    let span = document.querySelector('span')
+
+    for (var i = 0; i < ipt.length; i++) {
+        ipt[i].onkeydown = function () {
+            this.value = this.value.replace(/[^\d | ',' $]/, '')
+        }
+    }
+    btn.onclick = function () {
+        if (Number(ipt[0].value) > Number(ipt[1].value)) {
+            span.innerHTML = Number(ipt[0].value)
+        } else {
+            span.innerHTML = Number(ipt[1].value)
+        }
+    }
+</script>

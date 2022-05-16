@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./png/1.gif" alt="" style="display: block;">
+    <img src="./png/2.gif" alt="">
+    <img src="./png/3.gif" alt="">
+    <img src="./png/4.gif" alt="">
+</body>
+
+</html>
+
+<script>
+    let time
+    let index = 0
+    let img = document.querySelectorAll('img')
+
+
+    time = setInterval(function () {
+        if (index == 3) {
+            index = 0
+        } else {
+            index++
+        }
+        for (var i = 0; i < img.length; i++) {
+            if (index == i) {
+                img[i].style.display = 'block'
+            } else {
+                img[i].style.display = 'none'
+            }
+        }
+    }, 1000)
+</script>

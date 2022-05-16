@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font-family: 'kt';
+            font-size: 14px;
+        }
+
+        div {
+            position: absolute;
+            /* left: 300px;
+            top: 100px; */
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <span>上：↑ 下：↓ 左：← 右：→</span> <br>
+    <span> Ctrl + 1 : 背景变为绿色</span><br>
+    <span> Ctrl + 2 : 背景变为黄色</span><br>
+    <span> Ctrl + 2 : 背景变为黄色</span><br>
+    <span> Ctrl + ↑ : 放大</span><br>
+    <span>Ctrl + ↓ : 缩小</span>
+    <div></div>
+
+</body>
+
+</html>
+
+<script>
+    let div = document.querySelector('div')
+    let e
+    let screenX = 0
+    let screenY = 0
+    let width = 30
+    let height = 30
+    document.onkeydown = function () {
+        e = event
+
+        if (e.keyCode == 39) {
+            screenX = screenX + 10
+        }
+        div.style.left = screenX + 'px'
+        console.log(e.keyCode)
+        if (e.keyCode == 37) {
+            screenX = screenX - 10
+        }
+        div.style.left = screenX + 'px'
+        if (e.keyCode == 38) {
+            screenY = screenY - 10
+        }
+        div.style.top = screenY + 'px'
+        if (e.keyCode == 40) {
+            screenY = screenY + 10
+        }
+        div.style.top = screenY + 'px'
+        if (e.keyCode == 49) {
+            div.style.backgroundColor = 'skyblue'
+        }
+        if (e.keyCode == 50) {
+            div.style.backgroundColor = '#abf354'
+        }
+        if (e.keyCode == 51) {
+            width += 10
+            div.style.width = width + 'px'
+        }
+
+        if (e.keyCode == 52) {
+            height += 10
+            div.style.height = height + 'px'
+        }
+
+    }
+</script>

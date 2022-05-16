@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            margin: 5px 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        div {
+            position: absolute;
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./png/1 (1).gif" alt="">
+    <img src="./png/1 (2).gif" alt="">
+    <img src="./png/1 (3).gif" alt="">
+    <img src="./png/1 (4).gif" alt="">
+    <div></div>
+</body>
+
+</html>
+
+<script>
+    var img = document.querySelectorAll('img')
+    var div = document.querySelector('div')
+    var screenX = 0
+    var screenY = 0
+    document.onmousemove = function () {
+        screenX = event.screenX
+        screenY = event.screenY
+        div.style.left = screenX + 'px'
+        div.style.top = screenY + 'px'
+    }
+    for (var i = 0; i < img.length; i++) {
+        img[i].onmouseover = function () {
+            this.style.border = '3px solid skyblue'
+            div.innerHTML = ` <img src=${this.src} alt="">`
+        }
+        img[i].onmouseout = function () {
+            this.style.border = 'none'
+            div.innerHTML = ` `
+        }
+    }
+</script>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #box {
+            display: none;
+            width: 450px;
+            height: 250px;
+            background: #fff;
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .zzc {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(204, 204, 204, 0.411);
+            z-index: 0;
+        }
+
+        .title {
+            text-align: center;
+            font-family: 楷体;
+            padding: 20px 0 30px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        input {
+            display: inline-block;
+            width: 70%;
+            height: 30px;
+        }
+
+        .username {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .login-reg {
+            margin: 0 0 20px 0;
+        }
+
+        button {
+            display: block;
+            padding: 10px 80px;
+            border: none;
+            margin: 10px auto;
+            background: #fff;
+            border: 1px solid #111;
+        }
+
+        .x {
+            padding: 5px 10px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>点击弹出模态框</h1>
+
+    <div id="box">
+        <div class="x">X</div>
+        <div class="title">登录会员</div>
+        <div class="login-reg"><span class="username">用户名:</span> <input placeholder="请输入用户名"></div>
+        <div class="login-reg"><span class="username">密码:</span> <input placeholder="请输入密码"></div>
+        <button>登录</button>
+    </div>
+    <div class="zzc"></div>
+</body>
+
+</html>
+<script>
+    let show = document.querySelector('h1')
+    let box = document.querySelector('#box')
+    let zzc = document.querySelector('.zzc')
+    let x = document.querySelector('.x')
+    let title = document.querySelector('.title')
+    show.onclick = function () {
+        box.style.display = 'block'
+        zzc.style.display = 'block'
+        show.style.display = 'none'
+    }
+    x.onclick = function () {
+        box.style.display = 'none'
+        zzc.style.display = 'none'
+        show.style.display = 'block'
+    }
+
+
+    title.onmousedown = function (e) {
+
+        var x = e.pageX - box.clientLeft
+        var y = e.pageY - box.clientTop
+        document.onmousemove = function (e) {
+
+            box.style.left = e.pageX - x + 'px'
+            box.style.top = e.pageY - y + 'px'
+
+        }
+
+        document.onmouseup = function () {
+            document.onmousemove = null
+        }
+
+    }
+</script>
